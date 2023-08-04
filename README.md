@@ -22,7 +22,7 @@ e-Sign Web API is a powerful .Net Core 6 service that facilitates electronic sig
 
 #### **Token (Without Auth)**
 
-- **GET ~/api/Auth/LoginUser**
+- **POST ~/api/Auth/LoginUser**
 
 ```javascript
 {
