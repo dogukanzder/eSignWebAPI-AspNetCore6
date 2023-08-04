@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "d3f88aac-7189-4cdd-9061-f0f4cdac0855",
+		"name": "e-SignInnosaApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26663620"
+	},
+	"item": [
+		{
+			"name": "Signature",
+			"item": [
+				{
+					"name": "GetAllSignatures",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/Signature",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Signature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSignature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"string\",\r\n  \"title\": \"string\",\r\n  \"startDate\": \"2023-08-02T13:53:05.722Z\",\r\n  \"endDate\": \"2023-08-02T13:53:05.722Z\",\r\n  \"reminder\": \"string\",\r\n  \"files\": [\r\n    \"string\"\r\n  ],\r\n  \"users\": [\r\n    \"string\"\r\n  ],\r\n  \"nextSigner\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/Signature",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Signature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSignatureByIds",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  \"string1\",\r\n  \"string2\"\r\n]"
+						},
+						"url": {
+							"raw": "{{url}}/api/Signature/GetWithIds",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Signature",
+								"GetWithIds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSignatureById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/Signature/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Signature",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSignature",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"string\",\r\n  \"title\": \"string\",\r\n  \"startDate\": \"2023-08-02T13:53:05.722Z\",\r\n  \"endDate\": \"2023-08-02T13:53:05.722Z\",\r\n  \"reminder\": \"string\",\r\n  \"files\": [\r\n    \"string\"\r\n  ],\r\n  \"users\": [\r\n    \"string\"\r\n  ],\r\n  \"nextSigner\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/Signature/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Signature",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSignature",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/Signature/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Signature",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/User",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"surname\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"contacts\": [\r\n    \"string\"\r\n  ],\r\n  \"package\": \"string\",\r\n  \"signatures\": [\r\n    \"string\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/User",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/User/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updateuser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"surname\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"contacts\": [\r\n    \"string\"\r\n  ],\r\n  \"package\": \"string\",\r\n  \"signatures\": [\r\n    \"string\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/User/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/User/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"email\",\r\n  \"password\": \"pass123\",\r\n  \"grant_type\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/Auth/LoginUser",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Auth",
+						"LoginUser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://localhost:7188"
+		},
+		{
+			"key": "id",
+			"value": "64c7bc9181d15872e32b8f77"
+		}
+	]
+}
