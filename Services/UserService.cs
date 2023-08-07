@@ -26,7 +26,16 @@ namespace eSignAPI.Services
 
         public User CreateUser(User user)
         {
-            _users.InsertOne(user);
+            if (_users.Find(userx => userx.Email == user.Email).Count() == 0 && _users.Find(userx => userx.Phone == user.Phone).Count() == 0)
+            {
+                var textBytes = System.Text.Encoding.UTF8.GetBytes(user.Password);
+                user.Password = System.Convert.ToBase64String(textBytes);
+                _users.InsertOne(user);
+            }
+            else
+            {
+                user.Id = "null";
+            }
             return user;
         }
 
@@ -41,7 +50,12 @@ namespace eSignAPI.Services
             return _users.Find(user => user.Id == id).FirstOrDefault();
         }
 
-        
+
+        public User GetUserByEmail(string email)
+        {
+            return _users.Find(user => user.Email == email).FirstOrDefault();
+        }
+
 
         public bool UpdateUser(string id, User user)
         {

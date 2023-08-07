@@ -11,6 +11,7 @@ namespace eSignAPI.Interfaces
     {
         List<User> GetUsers();
         User GetUserById(string id);
+        User GetUserByEmail(string email);
         User CreateUser(User user);
         bool UpdateUser(string id, User user);
         bool DeleteUser(string id);

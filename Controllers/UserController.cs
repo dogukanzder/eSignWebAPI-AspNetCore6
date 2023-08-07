@@ -60,9 +60,29 @@ namespace eSignAPI.Controllers
             }
         }
 
+        // GET api/<UsersController>/5
+        [Route("[action]")]
+        [HttpGet]
+        [Authorize]
+        public ActionResult<User> GetUserByEmail(string email)
+        {
+            try
+            {
+                var user = userService.GetUserByEmail(email);
+
+                if (user == null)
+                    return NotFound($"There is no user with this email: {email}");
+
+                return user;
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+        }
+
         // POST api/<UsersController>
         [HttpPost]
-        [Authorize]
         public ActionResult<User> Post([FromBody] User user)
         {
             try
