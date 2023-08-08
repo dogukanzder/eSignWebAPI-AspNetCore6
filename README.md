@@ -58,7 +58,8 @@ Authorization - Bearer token
 }
 ```
 - **GET ~/api/User/{id}**
-- **POST ~/api/User/{id}**
+- **GET ~/api/User/GetUserByEmail/{email}**
+- **PUT ~/api/User/{id}**
 ```javascript
 {
 	"name": "string",
@@ -113,7 +114,7 @@ Authorization - Bearer token
 ]
 ```
 - **GET ~/api/Signature/{id}**
-- **POST ~/api/Signature/{id}**
+- **PUT ~/api/Signature/{id}**
 ```javascript
 {
 	"status": "string",
